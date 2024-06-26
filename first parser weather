@@ -1,0 +1,13 @@
+import requests
+from bs4 import BeautifulSoup 
+
+url = "https://ya.ru/?via=ywhl"
+
+respons = requests.get(url)
+
+bs = BeautifulSoup(respons.text, "lxml")
+
+
+temp = bs.find('a', class_ = "home-link2 informers3__item informers3__weather home-link2_color_inherit home-link2_hover_tertiary")
+
+print(temp)
