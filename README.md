@@ -51,4 +51,4 @@ Database: MySQL, PostgreSQL, MongoDB.
 Each service should be packaged in a separate Docker container.
 
 ## Launch
-The entire system should be started using docker-compose.
+The entire system should be started using docker-compose
