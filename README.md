@@ -24,3 +24,31 @@
 
 ## Запуск
 Вся система должна подниматься посредством docker-compose.
+
+
+##Educational Practice - Data Parsing Platform for Job Applicants and Vacancies
+
+## Goal
+Development of a platform for parsing data on job applicants and vacancies from the hh.ru platform.
+
+## Tasks
+1) Study existing platforms for parsing (beautiful soap, selenium, or platform APIs);
+2) Formulate functional requirements for the system;
+3) Design the database;
+4) Write user instructions;
+5) Conduct system testing.
+
+## Functionality
+1) Ability to create a request for parsing data based on fields such as full name, job title, skills, work format, etc.
+2) Loading parsed information into the database and displaying analytics on parameters (for example, the number of vacancies and the number of candidates per vacancy).
+
+## Frontend requirements
+Can be implemented as a web interface using any technology stack (e.g. Django framework). An interface for interacting with the client can also be implemented as a Telegram bot.
+
+## Backend requirements
+Programming language: Python.
+Database: MySQL, PostgreSQL, MongoDB.
+Each service should be packaged in a separate Docker container.
+
+## Launch
+The entire system should be started using docker-compose.
