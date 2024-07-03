@@ -76,6 +76,12 @@ try:
         #      print("Table created succesfully")
 
                 # add meaning
+          # таймер 15 сек на очищение таблицы
+         with connection.cursor() as cursor:
+            query = "CREATE EVENT delete_all_rows ON SCHEDULE EVERY 15 SECOND DO BEGIN DELETE FROM parsingHH; END"
+            cursor.execute(query)
+            # Запуск обработчика событий 
+            cursor.execute("SET GLOBAL event_scheduler = ON")
             
         with connection.cursor() as cursors:
             create_meaning = f"INSERT INTO parsingHH(vacancy_title, company_name, vacancy_salary_from, vacancy_salary_to, vacancy_salary_Currency, vacancy_url) VALUES('{vacancy_title}', '{company_name}', '{vacancy_salary_from}', '{vacancy_salary_to}', '{vacancy_salary_currency}', '{vacancy_url}');"
